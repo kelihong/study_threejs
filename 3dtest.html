@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three.js 测试</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <script src="./js/three.js"></script>
+    <script type="module">
+        import * as THREE from './js/three.module.js';
+        import { GLTFLoader } from './js/GLTFLoader.js';
+
+        init()
+        render()
+
+        var container, controls;
+        var camera, scene, renderer;
+
+        function init() {
+            console.log(1)
+            
+        }
+
+        function render() {
+            console.log('渲染')
+        }
+
+        // var loader = new GLTFLoader();
+
+        // loader.load('./3dModel/model1/scene.gltf', function (gltf) {
+
+        //     scene.add(gltf.scene);
+
+        // }, undefined, function (error) {
+
+        //     console.error(error);
+
+        // });
+    </script>
+
+</body>
+
+</html>

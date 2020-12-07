@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas width="500" height="200"></canvas>
+    <script>
+        
+
+        function imageToData(image, ext) {
+
+            canvas = canvas || document.createElement('canvas');
+            ctx = ctx || canvas.getContext('2d');
+
+            canvas.width = image.width;
+            canvas.height = image.height;
+
+            ctx.drawImage(image, 0, 0);
+
+            // Get the base64 encoded data
+            var base64data = canvas
+                .toDataURL(`image/${ext}`, 1)
+                .replace(/^data:image\/(png|jpg);base64,/, '');
+
+            // Convert to a uint8 array
+            return base64ToBuffer(base64data);
+
+        }
+
+        var a = imageToData()
+        console.log(a)
+    </script>
+</body>
+
+</html>
